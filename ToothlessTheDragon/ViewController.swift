@@ -20,6 +20,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBAction func saySomethingTapped(sender: UIButton) {
+        //daniel did this array!
+        let dragons: [String] = ["Toothless", "Tornado", "Cloudjumper", "Skullcrusher", "Stormfly"]
+        
+        //elliot did the random number
+        let randomNumber: Int = random() % dragons.count
+        
+        //daniel chooses the dragon
+        let dragon: String = dragons[randomNumber]
+        
+        //daniel does contatenation
+        displayLabel.text = "Hello " + dragon + "!"
+    }
 
 }
 
