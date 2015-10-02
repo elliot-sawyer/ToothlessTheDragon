@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var dragonImage: UIImageView!
     @IBOutlet weak var displayLabel: UILabel!
     @IBAction func saySomethingTapped(sender: UIButton) {
         //daniel did this array!
@@ -31,8 +32,13 @@ class ViewController: UIViewController {
         //daniel chooses the dragon
         let dragon: String = dragons[randomNumber]
         
+        //elliot is doing the images
+
+        let chosenDragonImage = UIImage(named: dragon.lowercaseString + ".png")
+        
         //daniel does contatenation
         displayLabel.text = "Hello " + dragon + "!"
+        dragonImage.image = chosenDragonImage
     }
 
 }

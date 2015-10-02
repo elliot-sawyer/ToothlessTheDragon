@@ -20,28 +20,34 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toothless is a dragon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sg8-FE-khF">
                                 <rect key="frame" x="20" y="28" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50N-e0-SGJ">
-                                <rect key="frame" x="252" y="98.5" width="96" height="30"/>
+                                <rect key="frame" x="252" y="98" width="96" height="30"/>
                                 <state key="normal" title="More dragons"/>
                                 <connections>
                                     <action selector="saySomethingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ea-wq-byL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-CD-Far">
+                                <rect key="frame" x="20" y="198" width="560" height="382"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yOd-CD-Far" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1yU-aO-Yx4"/>
                             <constraint firstItem="Sg8-FE-khF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQv-aG-5My"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sg8-FE-khF" secondAttribute="trailing" id="PQo-PT-Adt"/>
                             <constraint firstItem="50N-e0-SGJ" firstAttribute="top" secondItem="Sg8-FE-khF" secondAttribute="bottom" constant="50" id="k6v-36-hsB"/>
                             <constraint firstItem="50N-e0-SGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfT-mU-DHM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yOd-CD-Far" secondAttribute="trailing" id="xmy-Fw-KfP"/>
                             <constraint firstItem="Sg8-FE-khF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zQn-po-w3Z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="Sg8-FE-khF" id="FyY-Kj-hJU"/>
+                        <outlet property="dragonImage" destination="yOd-CD-Far" id="hZE-jd-J9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
